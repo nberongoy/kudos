@@ -1,10 +1,25 @@
-
 // Custom Theming for NG-ZORRO
 // For more information: https://ng.ant.design/docs/customize-theme/en
-@import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
+@import '../node_modules/ng-zorro-antd/ng-zorro-antd.less';
 
 // Override less variables to here
 // View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
 
 // @primary-color: #1890ff;
 /* You can add global styles to this file, and also import other style files */
+
+// color scheme
+@body-color: #fafafa;
+@primary-color: #3d75cb;
+@secondary-color: #cb3739;
+
+// text color
+@text-primary-color: #1e2329;
+
+body {
+  background-color: @body-color;
+}
+
+.cardContainer {
+  box-shadow: 0px 2px 4px #00000014, 0px 0px 2px #00000014;
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { TITLE } from './common/constants/constants';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,9 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.less'],
 })
 export class AppComponent {
-  title = 'Kudos Trucking Coorporation';
-
   constructor(private titleService: Title) {}
 
   ngOnInit() {
-    this.titleService.setTitle(this.title);
+    this.titleService.setTitle(TITLE);
   }
 }

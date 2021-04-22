@@ -1,10 +1,10 @@
 export class Session {
-  accessToken: string | any;
-  expiresIn: number | any;
+  accessToken: string = '';
+  expiresIn: number = 0;
 }
 
 export class UserConfiguration {
-  id: string | any;
-  userName: string | any;
-  fullName: string | any;
+  id: string = '';
+  userName: string = '';
+  fullName: string = '';
 }

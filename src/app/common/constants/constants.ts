@@ -27,3 +27,5 @@ export class Dialogs {
 export const LOCAL_STORAGE = {
   refreshToken: 'refreshToken',
 };
+
+export const TITLE = 'Kudos Trucking Coorporation';
