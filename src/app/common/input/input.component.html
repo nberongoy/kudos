@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-3 input-label" *ngIf="label" [ngStyle]="{ 'padding-top': '25px' }">
+    <label class="label">{{ label }}</label>
+  </div>
+  <div [ngClass]="{ 'col-md-9': label, 'col-md-12': !label }">
+    <mat-form-field appearance="outline" [floatLabel]="float">
+      <input
+        matInput
+        #input
+        [placeholder]="placeholderKey"
+        aria-label="input"
+        [formControl]="formControl"
+        [maxlength]="maxCharacters"
+        #autofocus
+        [required]="isRequired"
+        [type]="type"
+        (focus)="onFocus()"
+        [name]="name"
+        (focusout)="onFocusOut()"
+      />
+      <div *ngIf="suffix !== null && suffix !== undefined" matSuffix>{{ suffix }}</div>
+      <div *ngIf="clearInput" class="close-icon" (click)="onClearClick()" matSuffix><mat-icon>close</mat-icon></div>
+      <mat-hint *ngIf="maxCharacters && showHint" align="end">{{ input.value?.length || 0 }}/{{ maxCharacters }}</mat-hint>
+      <mat-error *ngFor="let error of getErrors()">
+        <span>{{ error.messageKey }} </span>
+      </mat-error>
+    </mat-form-field>
+  </div>
+</div>

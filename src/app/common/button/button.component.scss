@@ -1,0 +1,15 @@
+infivex-button {
+  button:disabled {
+    cursor: context-menu;
+
+    & > .mat-button-wrapper {
+      cursor: context-menu !important;
+    }
+  }
+
+  button {
+    // height: 100%;
+    border-radius: 4px;
+    color: #ffffff !important;
+  }
+}

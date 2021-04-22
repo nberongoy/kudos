@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-3 input-label" *ngIf="label" [ngStyle]="{ 'padding-top': '25px' }">
+    <label class="label">{{ label }}</label>
+  </div>
+  <div [ngClass]="{ 'col-md-9': label, 'col-md-12': !label }">
+    <mat-form-field color="primary" appearance="outline" [floatLabel]="float">
+      <mat-select [formControl]="formControl" [(value)]="selected" [required]="required" (selectionChange)="dropdownChanged($event)">
+        <div *ngFor="let item of dataSource">
+          <mat-option class="my-class" [value]="item.value">
+            {{ item.data }}
+          </mat-option>
+        </div>
+      </mat-select>
+      <mat-error *ngFor="let error of getErrors()">
+        <span>{{ error.messageKey }} </span>
+      </mat-error>
+    </mat-form-field>
+  </div>
+</div>

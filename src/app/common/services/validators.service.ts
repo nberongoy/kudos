@@ -1,18 +1,18 @@
-import { Injectable } from "@angular/core";
-import { FormControl, Validators } from "@angular/forms";
-import { Observable } from "rxjs";
-import { debounceTime, switchMap, map, take } from "rxjs/operators";
-import { environment } from "src/environments/environment";
-import { KudosRegex } from "../constants/constants";
+import { Injectable } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { debounceTime, switchMap, map, take } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+import { KudosRegex } from '../constants/constants';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
-export class InfivexValidatorsService {
+export class KudosValidatorsService {
   getRequiredFieldValidator(messageKey: string) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("required"),
+      check: (control: FormControl) => control.hasError('required'),
       validator: Validators.required,
       isAsync: false,
     };
@@ -21,7 +21,7 @@ export class InfivexValidatorsService {
   getEmailFormatValidator(messageKey: string) {
     return {
       messageKey,
-      check: (control: FormControl) => control.hasError("pattern"),
+      check: (control: FormControl) => control.hasError('pattern'),
       validator: Validators.pattern(KudosRegex.emailRegex),
       isAsync: false,
     };
@@ -30,8 +30,8 @@ export class InfivexValidatorsService {
   getNumericFieldValidator(messageKey: string) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("pattern"),
-      validator: Validators.pattern("^[-+]?(0|[1-9][0-9]*)$"),
+      check: (control: FormControl) => control.hasError('pattern'),
+      validator: Validators.pattern('^[-+]?(0|[1-9][0-9]*)$'),
       isAsync: false,
     };
   }
@@ -39,10 +39,8 @@ export class InfivexValidatorsService {
   getDecimalValidator(messageKey: string, decimals: number = 2) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("pattern"),
-      validator: Validators.pattern(
-        "^-?\\d+(\\.\\d{1,{0}})?$".replace("{0}", decimals.toString())
-      ),
+      check: (control: FormControl) => control.hasError('pattern'),
+      validator: Validators.pattern('^-?\\d+(\\.\\d{1,{0}})?$'.replace('{0}', decimals.toString())),
       isAsync: false,
     };
   }
@@ -50,9 +48,9 @@ export class InfivexValidatorsService {
   getEmptySpaceValidator(messageKey: string) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("emptySpace"),
+      check: (control: FormControl) => control.hasError('emptySpace'),
       validator: (control: FormControl) =>
-        (control.value ? control.value : 0).toString().trim() == ""
+        (control.value ? control.value : 0).toString().trim() == ''
           ? {
               emptySpace: true,
             }
@@ -64,7 +62,7 @@ export class InfivexValidatorsService {
   getPositiveNumbersValidator(messageKey: string) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("positiveNumbersOnly"),
+      check: (control: FormControl) => control.hasError('positiveNumbersOnly'),
       validator: (control: FormControl) =>
         (control.value ? control.value : 0) < 0
           ? {
@@ -78,11 +76,9 @@ export class InfivexValidatorsService {
   getMatchWithOtherControlValidator(messageKey: string, control: FormControl) {
     return {
       messageKey: messageKey,
-      check: (formControl: FormControl) =>
-        formControl.hasError("fieldsNotMatch"),
+      check: (formControl: FormControl) => formControl.hasError('fieldsNotMatch'),
       validator: (formControl: FormControl) =>
-        (formControl.value ? formControl.value : "") !==
-        (control.value ? control.value : "")
+        (formControl.value ? formControl.value : '') !== (control.value ? control.value : '')
           ? {
               fieldsNotMatch: true,
             }
@@ -91,10 +87,7 @@ export class InfivexValidatorsService {
     };
   }
 
-  createUniquenessValidator(
-    uniquenessChecker: (control: string) => Observable<any>,
-    formControl: FormControl
-  ) {
+  createUniquenessValidator(uniquenessChecker: (control: string) => Observable<any>, formControl: FormControl) {
     return formControl.valueChanges
       .pipe(debounceTime(1000))
       .pipe(
@@ -113,15 +106,13 @@ export class InfivexValidatorsService {
   getLengthValidator(messageKey: string) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("minlength"),
+      check: (control: FormControl) => control.hasError('minlength'),
       getMessageInterpolationParams: () => {
         return {
           0: environment.passwordRequirements.passwordRequiredLength.toString(),
         };
       },
-      validator: Validators.minLength(
-        environment.passwordRequirements.passwordRequiredLength
-      ),
+      validator: Validators.minLength(environment.passwordRequirements.passwordRequiredLength),
       isAsync: false,
     };
   }
@@ -129,11 +120,11 @@ export class InfivexValidatorsService {
   getHasNumberValidator(messageKey: string) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("hasDigit"),
+      check: (control: FormControl) => control.hasError('hasDigit'),
 
       validator: (formControl: FormControl) =>
         environment.passwordRequirements.passwordRequireDigit
-          ? (formControl.value ? formControl.value : "").match(/\d/)
+          ? (formControl.value ? formControl.value : '').match(/\d/)
             ? {}
             : { hasDigit: true }
           : {},
@@ -145,10 +136,10 @@ export class InfivexValidatorsService {
   getHasCapitalCaseValidator(messageKey: string) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("hasCapitalCase"),
+      check: (control: FormControl) => control.hasError('hasCapitalCase'),
       validator: (formControl: FormControl) =>
         environment.passwordRequirements.passwordRequireUppercase
-          ? (formControl.value ? formControl.value : "").match(/[A-Z]/)
+          ? (formControl.value ? formControl.value : '').match(/[A-Z]/)
             ? {}
             : { hasCapitalCase: true }
           : {},
@@ -159,10 +150,10 @@ export class InfivexValidatorsService {
   getHasSmallCaseValidator(messageKey: string) {
     return {
       messageKey: messageKey,
-      check: (control: FormControl) => control.hasError("hasCapitalLowerCase"),
+      check: (control: FormControl) => control.hasError('hasCapitalLowerCase'),
       validator: (formControl: FormControl) =>
         environment.passwordRequirements.passwordRequireLowercase
-          ? (formControl.value ? formControl.value : "").match(/[a-z]/)
+          ? (formControl.value ? formControl.value : '').match(/[a-z]/)
             ? {}
             : { hasCapitalLowerCase: true }
           : {},

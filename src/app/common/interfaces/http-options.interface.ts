@@ -1,4 +1,4 @@
-import { HttpHeaders, HttpParams } from "@angular/common/http/http";
+import { HttpHeaders, HttpParams } from '@angular/common/http/http';
 
 export interface IHttpOptions {
   headers?:
@@ -6,13 +6,13 @@ export interface IHttpOptions {
     | {
         [header: string]: string | string[];
       };
-  observe?: "body";
+  observe?: 'body';
   params?:
     | HttpParams
     | {
         [param: string]: string | string[];
       };
   reportProgress?: boolean;
-  responseType?: "json";
+  responseType?: 'json';
   withCredentials?: boolean;
 }

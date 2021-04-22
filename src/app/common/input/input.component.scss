@@ -1,0 +1,40 @@
+mah-hint {
+  color: inherit;
+}
+
+mat-form-field {
+  width: 100%;
+
+  .mat-form-field-infix {
+    width: 100%;
+  }
+}
+
+infivex-input {
+  div.mat-form-field-underline {
+    position: relative !important;
+    margin-top: 20px;
+  }
+  div.mat-form-field-subscript-wrapper {
+    position: relative !important;
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+  }
+
+  .mat-form-field-underline {
+    background-image: none !important;
+  }
+
+  .close-icon {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .label {
+    float: left !important;
+    margin-bottom: 0;
+  }
+}

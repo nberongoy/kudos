@@ -1,11 +1,11 @@
-import { Injectable } from "@angular/core";
-import { Subject, Observable } from "rxjs";
-import { ILoaderState } from "../interfaces/loader-state.interface";
-import { RequestData } from "../models/request-data.model";
-import { finalize } from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { Subject, Observable } from 'rxjs';
+import { ILoaderState } from '../interfaces/loader-state.interface';
+import { RequestData } from '../models/request-data.model';
+import { finalize } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class KudosLoaderService {
   private loaderSubject: Subject<ILoaderState>;
@@ -35,14 +35,11 @@ export class KudosLoaderService {
 }
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class KudosShowHideLoaderService {
   constructor(private loaderService: KudosLoaderService) {}
-  public showLoaderAndHideOnCompletion<T>(
-    observable: Observable<T>,
-    requestData?: RequestData
-  ): Observable<T> {
+  public showLoaderAndHideOnCompletion<T>(observable: Observable<T>, requestData?: RequestData | any): Observable<T> {
     if (requestData.showLoader) {
       this.loaderService.show();
     }

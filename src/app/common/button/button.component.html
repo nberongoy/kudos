@@ -1,0 +1,58 @@
+<button
+  type="button"
+  class="standardButton"
+  *ngIf="buttonType == 'flat'"
+  mat-flat-button
+  (click)="click($event)"
+  [ngStyle]="styles"
+  [color]="color"
+  [disabled]="disabled"
+  [disableRipple]="false"
+>
+  <mat-icon *ngIf="showIcon">{{ iconName }}</mat-icon>
+  {{ buttonText }}
+</button>
+
+<button
+  class="standardButton"
+  type="button"
+  *ngIf="buttonType == 'raised'"
+  mat-raised-button
+  (click)="click($event)"
+  [ngStyle]="styles"
+  [color]="color"
+  [disabled]="disabled"
+  [disableRipple]="false"
+>
+  <mat-icon *ngIf="showIcon">{{ iconName }}</mat-icon>
+  {{ buttonText }}
+</button>
+
+<button
+  class="standardButton"
+  type="button"
+  *ngIf="buttonType == 'stroked'"
+  mat-stroked-button
+  (click)="click($event)"
+  [ngStyle]="styles"
+  [color]="color"
+  [disabled]="disabled"
+  [disableRipple]="false"
+>
+  <mat-icon *ngIf="showIcon">{{ iconName }}</mat-icon>
+  {{ buttonText }}
+</button>
+
+<button
+  type="button"
+  *ngIf="buttonType == 'fab'"
+  mat-fab
+  (click)="click($event)"
+  [ngStyle]="styles"
+  [color]="color"
+  [disabled]="disabled"
+  [disableRipple]="false"
+>
+  <mat-icon *ngIf="showIcon">{{ iconName }}</mat-icon>
+  {{ buttonText }}
+</button>

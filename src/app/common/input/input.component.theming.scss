@@ -1,0 +1,11 @@
+@mixin input-theming($theme) {
+  infivex-input {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: mat-color(map-get($theme, primary), 200);
+    }
+
+    .close-icon {
+      color: mat-color(map-get($theme, primary), 400);
+    }
+  }
+}

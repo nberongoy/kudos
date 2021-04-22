@@ -1,0 +1,7 @@
+@mixin select-theming($theme) {
+  infivex-select {
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: mat-color(map-get($theme, primary), 200);
+    }
+  }
+}
