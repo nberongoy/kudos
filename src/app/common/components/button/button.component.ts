@@ -1,34 +1,44 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'infivex-button',
+  selector: 'kudos-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
+  styleUrls: ['./button.component.less'],
   encapsulation: ViewEncapsulation.None,
 })
-export class InfivexButtonComponent implements OnInit {
+export class KudosButtonComponent implements OnInit {
   @Input()
   textKey: string = '';
+
   @Input()
   text: string = '';
+
   @Input()
-  styles: Object;
+  styles: Object = {};
+
   @Input()
   disabled: boolean = false;
+
   @Input()
   color: string = 'primary';
-  @Input()
-  buttonType: string = 'flat';
 
   @Input()
   showIcon: boolean = false;
-  @Input()
-  iconName: string;
 
   @Input()
-  disableRipple: boolean;
+  iconName: string = '';
 
-  buttonText: string;
+  @Input()
+  disableRipple: boolean = false;
+
+  buttonText: string = '';
+
+  @Input()
+  buttonType: any = 'primary';
+
+  @Input()
+  block: boolean = false;
+
   @Output()
   onButtonClick: EventEmitter<void>;
 
@@ -40,7 +50,7 @@ export class InfivexButtonComponent implements OnInit {
     this.addButtonText();
   }
 
-  click(event) {
+  click(event: any) {
     if (!this.disabled) {
       event.currentTarget.blur();
       this.onButtonClick.emit(event);

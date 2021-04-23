@@ -71,5 +71,17 @@ export class LoginComponent implements OnInit {
 
   gotoForgotPassword(): void {}
 
-  loginSubmit(): void {}
+  loginSubmit(): void {
+    for (const i in this.loginForm.controls) {
+      this.loginForm.controls[i].markAsDirty();
+      this.loginForm.controls[i].updateValueAndValidity();
+    }
+
+    if (this.loginForm.valid) {
+      if (this.loginForm.dirty) {
+        this.sessionService.createNewSession();
+        this.router.navigate(['home']);
+      }
+    }
+  }
 }
