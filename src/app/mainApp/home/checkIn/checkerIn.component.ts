@@ -10,6 +10,8 @@ import { TITLE } from 'src/app/common/constants/constants';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GenericValidator } from 'src/app/common/validators/generic-validator';
 import { Subscription } from 'rxjs';
+import { NzMessageService } from 'ng-zorro-antd/message';
+import { NzUploadChangeParam } from 'ng-zorro-antd/upload';
 
 @Component({
   selector: 'checkerIn',
@@ -27,7 +29,7 @@ export class CheckerInComponent {
   checkerInSubscription: Subscription = new Subscription();
   loading = false;
 
-  constructor(private titleService: Title, private formBuilder: FormBuilder) {
+  constructor(private titleService: Title, private formBuilder: FormBuilder, private msg: NzMessageService) {
     this.validationMessages = {
       inspectedDate: {},
       inspectedTime: {},
@@ -83,6 +85,18 @@ export class CheckerInComponent {
     if (this.checkerInForm.valid) {
       if (this.checkerInForm.dirty) {
       }
+    }
+  }
+
+  handleChange({ file, fileList }: NzUploadChangeParam): void {
+    const status = file.status;
+    if (status !== 'uploading') {
+      console.log(file, fileList);
+    }
+    if (status === 'done') {
+      this.msg.success(`${file.name} file uploaded successfully.`);
+    } else if (status === 'error') {
+      this.msg.error(`${file.name} file upload failed.`);
     }
   }
 }

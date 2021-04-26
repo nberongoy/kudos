@@ -10,6 +10,7 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzMessageModule } from 'ng-zorro-antd/message';
 @NgModule({
   imports: [
     NzGridModule,
@@ -23,6 +24,7 @@ import { NzUploadModule } from 'ng-zorro-antd/upload';
     NzMenuModule,
     NzTabsModule,
     NzUploadModule,
+    NzMessageModule,
   ],
   declarations: [],
   exports: [
@@ -37,6 +39,7 @@ import { NzUploadModule } from 'ng-zorro-antd/upload';
     NzMenuModule,
     NzTabsModule,
     NzUploadModule,
+    NzMessageModule,
   ],
 })
 export class KudosThirdPartyImportsModule {}
