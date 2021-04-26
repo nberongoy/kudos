@@ -1,0 +1,11 @@
+<div nz-row class="menuBody">
+  <div nz-col nzSpan="24">
+    <img src="https://i.pinimg.com/originals/8a/b3/6c/8ab36c4bafe5b7983b13512c0d7c059d.jpg" class="menuLogo" />
+  </div>
+  <div nz-col nzSpan="24">
+    <nz-card class="menuContainer">
+      <div nz-card-grid [ngStyle]="gridStyle" (click)="checkerIn()">Checker In Inspection</div>
+      <div nz-card-grid [ngStyle]="gridStyle" (click)="checkerOut()">Checker Out Inspection</div>
+    </nz-card>
+  </div>
+</div>

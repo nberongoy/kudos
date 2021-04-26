@@ -7,14 +7,14 @@
         <nz-spin [nzSpinning]="loading" [nzIndicator]="indicatorTemplate" nzTip="Logging in">
           <span nz-text nzType="danger" [ngStyle]="{ 'margin-bottom': '5px' }">{{ errorMessage }}</span>
 
-          <label>Username</label>
+          <label class="loginLabel">Username</label>
           <nz-form-item>
             <nz-form-control [nzErrorTip]="displayMessage.username">
               <input type="email" nz-input formControlName="username" />
             </nz-form-control>
           </nz-form-item>
 
-          <label>Password</label>
+          <label class="loginLabel">Password</label>
           <nz-form-item>
             <nz-form-control [nzErrorTip]="displayMessage.password">
               <nz-input-group [nzSuffix]="suffixTemplate">
@@ -28,7 +28,7 @@
 
           <nz-form-item>
             <nz-form-control>
-              <kudos-button [text]="'Login'" [block]="true"></kudos-button>
+              <kudos-button [text]="'Log In'" [block]="true"></kudos-button>
             </nz-form-control>
           </nz-form-item>
 

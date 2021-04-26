@@ -1,16 +1,31 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from "./home.component";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { CheckerInComponent } from './checkIn/checkerIn.component';
+import { CheckerOutComponent } from './checkOut/checkerOut.component';
+import { HomeComponent } from './home.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: HomeComponent,
     children: [
       {
-        path: "",
-        pathMatch: "full",
-        redirectTo: "welcome",
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'menu',
+      },
+      {
+        path: 'menu',
+        component: MenuComponent,
+      },
+      {
+        path: 'checker-in',
+        component: CheckerInComponent,
+      },
+      {
+        path: 'checker-out',
+        component: CheckerOutComponent,
       },
     ],
   },

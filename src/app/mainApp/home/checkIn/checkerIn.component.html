@@ -1,0 +1,227 @@
+<div class="card-container">
+  <h3 [ngStyle]="{ marginBottom: '22px' }">Checker In Inspection Form</h3>
+  <form nz-form (ngSubmit)="saveHandler()" [formGroup]="checkerInForm" autocomplete="off">
+    <nz-tabset nzType="card" [(nzSelectedIndex)]="index">
+      <!-- Tab 1 -->
+      <nz-tab nzTitle="Container In Inspection">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Inspected Date</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.inspectedDate">
+            <input type="text" nz-input formControlName="inspectedDate" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Inspected Date</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.inspectedTime">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="inspectedTime" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Inspector</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.inspector">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="inspector" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </nz-tab>
+      <!-- END Tab 1 -->
+      <!-- Tab 2 -->
+      <nz-tab nzTitle="Container In Details">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Container No.</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.containerNo">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="containerNo" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Shipping Lines</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.shippingLines">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="shippingLines" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Size/Type</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.sizeType">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="sizeType" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Class</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.class">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="class" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Manufacture Date</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.manufactureDate">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="manufactureDate" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </nz-tab>
+      <!-- END Tab 2 -->
+      <!-- Tab 3 -->
+      <nz-tab nzTitle="Shipper Details">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Shipper Name</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.shipperName">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="shipperName" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Plate Number</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.plateNumber">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="plateNumber" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Notes</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.notes">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="notes" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </nz-tab>
+      <!-- END Tab 3 -->
+      <!-- Tab 3 -->
+      <nz-tab nzTitle="Container Condition and Status">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Box Condition</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.boxCondition">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="boxCondition" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Empty Loaded</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.emptyLoaded">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="emptyLoaded" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Yard Location</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.yardLocation">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="yardLocation" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Cleanliness</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.cleanliness">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="cleanliness" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </nz-tab>
+      <!-- END Tab 4 -->
+      <!-- Tab 4 -->
+      <nz-tab nzTitle="Damage Details of Container">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Component</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.component">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="component" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Damage</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.damage">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="damage" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Repair</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.repair">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="repair" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Location</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.location">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="location" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Length</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.length">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="length" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Width</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.width">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="width" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Quantity</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.quantity">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="quantity" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzFor="note">Description</nz-form-label>
+          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.description">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="description" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <!-- END Tab 4 -->
+      </nz-tab>
+    </nz-tabset>
+  </form>
+</div>
