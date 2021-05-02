@@ -59,9 +59,13 @@
 
         <nz-form-item>
           <nz-form-label nzSm="24" nzMd="10">Container No. <span [ngStyle]="{ color: 'red' }"> *</span></nz-form-label>
-          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.containerNo">
+          <nz-form-control
+            nzSm="24"
+            nzMd="14"
+            [nzErrorTip]="hasContainer ? displayMessage.containerNo : validationMessages.containerNo.containerValidator"
+          >
             <nz-input-group>
-              <input type="text" nz-input formControlName="containerNo" />
+              <input type="text" nz-input formControlName="containerNo" (ngModelChange)="searchContainer()" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>

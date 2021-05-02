@@ -1,6 +1,6 @@
 export const lookup = {
-  sizeType: () => {
-    return [
+  sizeType: (sizeTypeId?: any): any => {
+    const dataSizeType = [
       {
         id: 1,
         description: '40 RF - 40 FT. Standard Reffer',
@@ -22,9 +22,11 @@ export const lookup = {
         description: '45 HC - 45 FT. High Cube Dry',
       },
     ];
+
+    return sizeTypeId ? dataSizeType.find((size: any) => size.id === sizeTypeId)?.description : dataSizeType;
   },
-  class: () => {
-    return [
+  class: (classId?: any): any => {
+    const dataClass = [
       {
         id: 1,
         description: 'Class A',
@@ -38,9 +40,11 @@ export const lookup = {
         description: 'Class C',
       },
     ];
+
+    return classId ? dataClass.find((classVal: any) => classVal.id === classId)?.description : dataClass;
   },
-  boxCondtion: () => {
-    return [
+  boxCondtion: (boxCondtionId?: any): any => {
+    const dataBoxCondtion = [
       {
         id: 1,
         description: 'Good',
@@ -54,9 +58,11 @@ export const lookup = {
         description: 'Major Damage',
       },
     ];
+
+    return boxCondtionId ? dataBoxCondtion.find((dataBox: any) => dataBox.id === boxCondtionId)?.description : dataBoxCondtion;
   },
-  emptyLoaded: () => {
-    return [
+  emptyLoaded: (emptyLoadedId?: any): any => {
+    const dataEmptyLoaded = [
       {
         id: 1,
         description: 'Empty',
@@ -66,9 +72,11 @@ export const lookup = {
         description: 'Loaded',
       },
     ];
+
+    return emptyLoadedId ? dataEmptyLoaded.find((item: any) => item.id === emptyLoadedId)?.description : dataEmptyLoaded;
   },
-  cleanliness: () => {
-    return [
+  cleanliness: (cleanlinessId?: any): any => {
+    const dataCleanliness = [
       {
         id: 1,
         description: 'Clean',
@@ -82,17 +90,21 @@ export const lookup = {
         description: 'For Checking',
       },
     ];
+
+    return cleanlinessId ? dataCleanliness.find((clean: any) => clean.id === cleanlinessId)?.description : dataCleanliness;
   },
-  yardLocation: () => {
-    return [
+  yardLocation: (yardLocationId?: any): any => {
+    const dataYardLocation = [
       { id: 1, description: 'CY1' },
       { id: 2, description: 'CY2' },
       { id: 3, description: 'CY3' },
       { id: 4, description: 'CY4' },
     ];
+
+    return yardLocationId ? dataYardLocation.find((yard: any) => yard.id === yardLocationId)?.description : dataYardLocation;
   },
-  shippingLines: () => {
-    return [
+  shippingLines: (shippingLineId?: any): any => {
+    const dataShippingLines = [
       { id: 1, description: '2GO' },
       { id: 2, description: '3 FOR 8 TRADING' },
       { id: 3, description: 'A-1 CONCRETE POLES, INC.' },
@@ -102,5 +114,7 @@ export const lookup = {
       { id: 7, description: 'CXPORT FORWARDER' },
       { id: 8, description: 'DAVAO OIL MILL' },
     ];
+
+    return shippingLineId ? dataShippingLines.find((shipping: any) => shipping.id === shippingLineId)?.description : dataShippingLines;
   },
 };

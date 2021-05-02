@@ -7,13 +7,16 @@ import { Router } from '@angular/router';
 import { debounceTime } from 'rxjs/operators';
 import { i18n, TRANS } from 'src/assets/translations';
 import { TITLE } from 'src/app/common/constants/constants';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { GenericValidator } from 'src/app/common/validators/generic-validator';
-import { Subscription } from 'rxjs';
+import { Observable, Observer, Subscription } from 'rxjs';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzUploadChangeParam, NzUploadFile } from 'ng-zorro-antd/upload';
 import SignaturePad from 'signature_pad';
 import { lookup } from 'src/app/common/constants/lookup';
+import { CheckInService } from '../checkIn/checkerIn.service';
+import { ContainerInInspectionInterface } from 'src/app/common/interfaces/container.interface';
+import { ContainerInInspection } from 'src/app/common/models/container.model';
 
 function getBase64(file: File): Promise<string | ArrayBuffer | null> {
   return new Promise((resolve, reject) => {
@@ -36,13 +39,14 @@ export class CheckerOutComponent {
   checkerOutForm: FormGroup = new FormGroup({});
 
   displayMessage: { [key: string]: string } = {};
-  private validationMessages: { [key: string]: { [key: string]: string } } = {};
+  validationMessages: { [key: string]: { [key: string]: string } } = {};
   private genericValidator: GenericValidator = new GenericValidator({});
   checkerInSubscription: Subscription = new Subscription();
   loading = false;
   visible = false;
   canvas: any;
   signaturePad: any;
+  hasContainer = true;
 
   // look ups
   lookupSizeType: any = lookup.sizeType();
@@ -53,9 +57,14 @@ export class CheckerOutComponent {
   lookupCleanliness: any = lookup.cleanliness();
   lookupShippingLines: any = lookup.shippingLines();
 
-  constructor(private titleService: Title, private formBuilder: FormBuilder, private msg: NzMessageService) {
+  constructor(
+    private titleService: Title,
+    private formBuilder: FormBuilder,
+    private msg: NzMessageService,
+    private checkInService: CheckInService
+  ) {
     this.validationMessages = {
-      containerNo: { required: 'Container no. is required.' },
+      containerNo: { required: 'Container no. is required.', containerValidator: 'Container not found.' },
       shippingLines: { required: 'Shipping line is required.' },
       boxCondition: { required: 'Box condition is required.' },
     };
@@ -70,19 +79,21 @@ export class CheckerOutComponent {
       inspectedDate: [null, []],
       inspectedTime: [null, []],
       inspector: [null, []],
-      containerNo: [null, [Validators.required]],
-      shippingLines: [null, [Validators.required]],
-      sizeType: [null, []],
-      class: [null, []],
-      manufactureDate: [null, []],
+      containerNo: [null, [Validators.required], this.containerValidator],
+      shippingLines: new FormControl({ value: '', disabled: true }, [Validators.required]),
+      sizeType: new FormControl({ value: '', disabled: true }),
+      class: new FormControl({ value: '', disabled: true }),
+      manufactureDate: new FormControl({ value: '', disabled: true }),
       shipperName: [null, []],
       plateNumber: [null, []],
       notes: [null, []],
       boxCondition: [null, [Validators.required]],
-      emptyLoaded: [null, []],
+      emptyLoaded: new FormControl({ value: '', disabled: true }),
       yardLocation: [null, []],
       cleanliness: [null, []],
       remarks: [null, []],
+      booking: [null, []],
+      sealNumber: [null, []],
     });
 
     this.checkerInSubscription = this.checkerOutForm.valueChanges.subscribe(() => {
@@ -168,5 +179,44 @@ export class CheckerOutComponent {
     }
     this.previewImage = file.url || file.preview;
     this.previewVisible = true;
+  };
+
+  containerValidator = (control: FormControl) =>
+    new Observable((observer: Observer<ValidationErrors | null>) => {
+      const containerDetails: ContainerInInspectionInterface | undefined = this.checkInService.getContainer(control.value);
+
+      if (containerDetails) {
+        this.checkerOutForm.patchValue({
+          ...this.checkerOutForm.value,
+          shippingLines: containerDetails.shippingLines,
+          sizeType: containerDetails.sizeType,
+          class: containerDetails.class,
+          manufactureDate: containerDetails.manufactureDate,
+          emptyLoaded: containerDetails.emptyLoaded,
+        } as ContainerInInspectionInterface);
+        console.log('error');
+        this.hasContainer = true;
+        observer.next(null);
+      } else {
+        this.hasContainer = false;
+        observer.next({ error: true });
+      }
+
+      observer.complete();
+    });
+
+  searchContainer = () => {
+    if (this.checkerOutForm.value.containerNo === '') {
+      this.hasContainer = true;
+
+      this.checkerOutForm.patchValue({
+        ...this.checkerOutForm.value,
+        shippingLines: null,
+        sizeType: null,
+        class: null,
+        manufactureDate: null,
+        emptyLoaded: null,
+      } as ContainerInInspectionInterface);
+    }
   };
 }
