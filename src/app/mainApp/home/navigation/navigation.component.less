@@ -1,9 +1,14 @@
 @import 'src/styles.less';
 
 .navigationContainer {
-  line-height: 80px;
+  line-height: 70px;
   color: @text-primary-color;
   display: flex;
+}
+
+.navigationLogo {
+  width: 100px;
+  height: 70px;
 }
 
 .navigationBody {
@@ -12,12 +17,12 @@
   display: flex;
 }
 
-.ant-menu-horizontal > .ant-menu-item:hover {
-  color: @primary-color !important;
-  border-bottom: 2px solid @primary-color !important;
+.ant-menu-item:hover {
+  color: @primary-color;
+  border-bottom: 2px solid #3d75cb;
 }
 
-.navigationLogo {
-  width: 100px;
-  height: 70px;
+.ant-menu-item-selected {
+  color: @primary-color;
+  border-bottom: 2px solid #3d75cb;
 }

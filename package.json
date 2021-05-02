@@ -24,6 +24,7 @@
     "moment": "^2.29.1",
     "ng-zorro-antd": "^11.4.0",
     "rxjs": "^6.6.7",
+    "signature_pad": "^3.0.0-beta.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },

@@ -1,1 +1,10 @@
-<button nz-button class="kudosButtonStyle" [nzType]="buttonType" [nzBlock]="block">{{ buttonText }}</button>
+<button
+  nz-button
+  [ngClass]="{ kudosButtonStyleBlockOn: block, kudosButtonStyle: !block }"
+  [nzType]="buttonType"
+  [nzBlock]="block"
+  [ngStyle]="styles"
+  (click)="click($event)"
+>
+  {{ buttonText }}
+</button>

@@ -1,0 +1,34 @@
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <h3 [ngStyle]="{ marginTop: '8px', marginLeft: '20px' }">Container Inquiry</h3>
+  </div>
+</div>
+
+<div nz-row [ngStyle]="{ padding: '20px' }">
+  <div nz-col nzSpan="24">
+    <nz-card>
+      <nz-table #inquiryTable nzSize="small" [nzData]="data">
+        <thead>
+          <tr>
+            <th>Container No.</th>
+            <th>Shipping Lines</th>
+            <th>Size/Type</th>
+            <th>Class</th>
+            <th>Date In</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of inquiryTable.data">
+            <td>{{ data.containerNo }}</td>
+            <td>{{ data.shippingLines }}</td>
+            <td>{{ data.sizeType }}</td>
+            <td>{{ data.class }}</td>
+            <td>{{ data.inspectedDate }}</td>
+            <td>{{ data.remarks }}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-card>
+  </div>
+</div>

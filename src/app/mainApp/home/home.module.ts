@@ -6,9 +6,10 @@ import { CheckerOutComponent } from './checkOut/checkerOut.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { MenuComponent } from './menu/menu.component';
+import { InquiryComponent } from './inquiry/inquiry.component';
 import { KudosNavigationComponent } from './navigation/navigation.component';
 @NgModule({
-  declarations: [HomeComponent, MenuComponent, KudosNavigationComponent, CheckerInComponent, CheckerOutComponent],
+  declarations: [HomeComponent, MenuComponent, KudosNavigationComponent, CheckerInComponent, CheckerOutComponent, InquiryComponent],
   imports: [KudosThirdPartyImportsModule, HomeRoutingModule, KudosCommonImportsModule],
   exports: [],
   bootstrap: [],

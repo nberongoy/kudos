@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CheckerInComponent } from './checkIn/checkerIn.component';
 import { CheckerOutComponent } from './checkOut/checkerOut.component';
 import { HomeComponent } from './home.component';
+import { InquiryComponent } from './inquiry/inquiry.component';
 import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'checker-out',
         component: CheckerOutComponent,
+      },
+      {
+        path: 'inquiry',
+        component: InquiryComponent,
       },
     ],
   },

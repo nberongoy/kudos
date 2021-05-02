@@ -1,0 +1,255 @@
+<div nz-row>
+  <div nz-col nzXs="24" nzSm="24" nzMd="12">
+    <h3 [ngStyle]="{ marginTop: '8px', marginLeft: '20px' }">Checker Out Inspection Form</h3>
+  </div>
+  <div nz-col nzXs="24" nzSm="24" nzMd="12">
+    <div [ngStyle]="{ float: 'right' }">
+      <kudos-button
+        [text]="'Save'"
+        [styles]="{ marginTop: '8px', marginRight: '8px' }"
+        (onButtonClick)="saveHandler()"
+        [buttonType]="'primary'"
+      ></kudos-button>
+
+      <kudos-button [text]="'Cancel'" [styles]="{ marginTop: '8px', marginRight: '20px' }" [buttonType]="'default'"></kudos-button>
+    </div>
+  </div>
+</div>
+
+<form nz-form [formGroup]="checkerOutForm" autocomplete="off">
+  <div nz-row>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" [ngStyle]="{ padding: '20px' }">
+      <nz-card>
+        <h3 [ngStyle]="{ color: '#3d75cb' }">Container Out Inspection</h3>
+
+        <!-- Tab 1 -->
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Inspected Date</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.inspectedDate">
+            <nz-date-picker formControlName="inspectedDate" [ngStyle]="{ width: '100%' }"></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Inspected Time</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.inspectedTime">
+            <nz-input-group>
+              <nz-time-picker
+                formControlName="inspectedTime"
+                [ngStyle]="{ width: '100%' }"
+                [nzUse12Hours]="true"
+                nzFormat="h:mm a"
+              ></nz-time-picker>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Inspector</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.inspector">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="inspector" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <!-- END Tab 1 -->
+
+        <!-- Tab 2 -->
+        <h3 [ngStyle]="{ color: '#3d75cb' }">Container Out Details</h3>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Container No. <span [ngStyle]="{ color: 'red' }"> *</span></nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.containerNo">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="containerNo" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Shipping Lines <span [ngStyle]="{ color: 'red' }"> *</span></nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.shippingLines">
+            <nz-input-group>
+              <nz-select
+                nzShowSearch
+                nzAllowClear
+                nzPlaceHolder="Select shipping lines"
+                [ngStyle]="{ width: '100%' }"
+                formControlName="shippingLines"
+              >
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupShippingLines"></nz-option>
+              </nz-select>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Size/Type</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.sizeType">
+            <nz-select
+              nzShowSearch
+              nzAllowClear
+              nzPlaceHolder="Select a size type"
+              [ngStyle]="{ width: '100%' }"
+              formControlName="sizeType"
+            >
+              <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupSizeType"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Class</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.class">
+            <nz-input-group>
+              <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a class" [ngStyle]="{ width: '100%' }" formControlName="class">
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupClass"></nz-option>
+              </nz-select>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Manufacture Date</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.manufactureDate">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="manufactureDate" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Empty/Loaded</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.emptyLoaded">
+            <nz-input-group>
+              <nz-select
+                nzShowSearch
+                nzAllowClear
+                nzPlaceHolder="Select empty loaded"
+                [ngStyle]="{ width: '100%' }"
+                formControlName="emptyLoaded"
+              >
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupEmptyLoaded"></nz-option>
+              </nz-select>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <!-- END Tab 2 -->
+
+        <!-- Tab 3 -->
+        <h3 [ngStyle]="{ color: '#3d75cb' }">Shipper Details</h3>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Booking</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.booking">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="booking" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Shipper Name</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.shipperName">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="shipperName" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Plate Number</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.plateNumber">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="plateNumber" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Notes</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.notes">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="notes" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Seal Number</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.sealNumber">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="sealNumber" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <!-- END Tab 3 -->
+      </nz-card>
+    </div>
+
+    <div nz-col nzXs="24" nzMd="12" [ngStyle]="{ padding: '20px' }">
+      <nz-card>
+        <div nz-row>
+          <div nz-col nzSpan="24" [ngStyle]="{ display: 'flex' }">
+            <h3 [ngStyle]="{ color: '#3d75cb' }">Captured Photos</h3>
+          </div>
+        </div>
+
+        <div nz-row>
+          <div nz-col nzSpan="24">
+            <div class="clearfix">
+              <nz-upload
+                nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                nzListType="picture-card"
+                [(nzFileList)]="fileList"
+                [nzShowButton]="fileList.length < 8"
+                [nzPreview]="handlePreview"
+              >
+                <div>
+                  <i nz-icon nzType="plus"></i>
+                  <div style="margin-top: 8px">Upload</div>
+                </div>
+              </nz-upload>
+              <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible = false">
+                <ng-template #modalContent>
+                  <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
+                </ng-template>
+              </nz-modal>
+            </div>
+          </div>
+        </div>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24">Remarks</nz-form-label>
+          <nz-form-control [nzSpan]="24" [nzErrorTip]="displayMessage.remarks">
+            <nz-input-group>
+              <textarea rows="4" nz-input formControlName="remarks"></textarea>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </nz-card>
+
+      <div class="bottom-container">
+        <div nz-row>
+          <div nz-col [nzSpan]="24">
+            <div class="signatureContaier">
+              <label>Signature</label>
+              <div class="wrapper">
+                <canvas id="signature-pad" class="signature-pad"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div nz-col [nzSpan]="24">
+            <kudos-button
+              [text]="'Clear Signature'"
+              [styles]="{ marginTop: '8px' }"
+              [buttonType]="'default'"
+              (onButtonClick)="clearSignature($event)"
+            ></kudos-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

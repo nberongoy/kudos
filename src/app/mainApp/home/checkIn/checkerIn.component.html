@@ -1,40 +1,65 @@
-<div class="card-container">
-  <h3 [ngStyle]="{ marginBottom: '22px' }">Checker In Inspection Form</h3>
-  <nz-tabset nzType="card" [(nzSelectedIndex)]="index">
-    <form nz-form (ngSubmit)="saveHandler()" [formGroup]="checkerInForm" autocomplete="off">
-      <!-- Tab 1 -->
-      <nz-tab nzTitle="Container In Inspection">
+<div nz-row>
+  <div nz-col nzXs="24" nzSm="24" nzMd="12">
+    <h3 [ngStyle]="{ marginTop: '8px', marginLeft: '20px' }">Checker In Inspection Form</h3>
+  </div>
+  <div nz-col nzXs="24" nzSm="24" nzMd="12">
+    <div [ngStyle]="{ float: 'right' }">
+      <kudos-button
+        [text]="'Save'"
+        [styles]="{ marginTop: '8px', marginRight: '8px' }"
+        (onButtonClick)="saveHandler()"
+        [buttonType]="'primary'"
+      ></kudos-button>
+
+      <kudos-button [text]="'Cancel'" [styles]="{ marginTop: '8px', marginRight: '20px' }" [buttonType]="'default'"></kudos-button>
+    </div>
+  </div>
+</div>
+
+<form nz-form [formGroup]="checkerInForm" autocomplete="off">
+  <div nz-row>
+    <div nz-col nzXs="24" nzSm="24" nzMd="12" [ngStyle]="{ padding: '20px' }">
+      <nz-card>
+        <h3 [ngStyle]="{ color: '#3d75cb' }">Container In Inspection</h3>
+
+        <!-- Tab 1 -->
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Inspected Date</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.inspectedDate">
-            <input type="text" nz-input formControlName="inspectedDate" />
+          <nz-form-label nzSm="24" nzMd="10">Inspected Date</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.inspectedDate">
+            <nz-date-picker formControlName="inspectedDate" [ngStyle]="{ width: '100%' }"></nz-date-picker>
           </nz-form-control>
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Inspected Date</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.inspectedTime">
+          <nz-form-label nzSm="24" nzMd="10">Inspected Time</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.inspectedTime">
             <nz-input-group>
-              <input type="text" nz-input formControlName="inspectedTime" />
+              <nz-time-picker
+                formControlName="inspectedTime"
+                [ngStyle]="{ width: '100%' }"
+                [nzUse12Hours]="true"
+                nzFormat="h:mm a"
+              ></nz-time-picker>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Inspector</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.inspector">
+          <nz-form-label nzSm="24" nzMd="10">Inspector</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.inspector">
             <nz-input-group>
               <input type="text" nz-input formControlName="inspector" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
-      </nz-tab>
-      <!-- END Tab 1 -->
-      <!-- Tab 2 -->
-      <nz-tab nzTitle="Container In Details">
+        <!-- END Tab 1 -->
+
+        <!-- Tab 2 -->
+        <h3 [ngStyle]="{ color: '#3d75cb' }">Container In Details</h3>
+
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Container No.</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.containerNo">
+          <nz-form-label nzSm="24" nzMd="10">Container No. <span [ngStyle]="{ color: 'red' }"> *</span></nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.containerNo">
             <nz-input-group>
               <input type="text" nz-input formControlName="containerNo" />
             </nz-input-group>
@@ -42,47 +67,64 @@
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Shipping Lines</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.shippingLines">
+          <nz-form-label nzSm="24" nzMd="10">Shipping Lines <span [ngStyle]="{ color: 'red' }"> *</span></nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.shippingLines">
             <nz-input-group>
-              <input type="text" nz-input formControlName="shippingLines" />
+              <nz-select
+                nzShowSearch
+                nzAllowClear
+                nzPlaceHolder="Select shipping lines"
+                [ngStyle]="{ width: '100%' }"
+                formControlName="shippingLines"
+              >
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupShippingLines"></nz-option>
+              </nz-select>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Size/Type</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.sizeType">
+          <nz-form-label nzSm="24" nzMd="10">Size/Type</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.sizeType">
+            <nz-select
+              nzShowSearch
+              nzAllowClear
+              nzPlaceHolder="Select a size type"
+              [ngStyle]="{ width: '100%' }"
+              formControlName="sizeType"
+            >
+              <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupSizeType"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzSm="24" nzMd="10">Class</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.class">
             <nz-input-group>
-              <input type="text" nz-input formControlName="sizeType" />
+              <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a class" [ngStyle]="{ width: '100%' }" formControlName="class">
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupClass"></nz-option>
+              </nz-select>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Class</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.class">
+          <nz-form-label nzSm="24" nzMd="10">Manufacture Date</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.manufactureDate">
             <nz-input-group>
-              <input type="text" nz-input formControlName="class" />
+              <nz-date-picker formControlName="manufactureDate" [ngStyle]="{ width: '100%' }"></nz-date-picker>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
+        <!-- END Tab 2 -->
+
+        <!-- Tab 3 -->
+        <h3 [ngStyle]="{ color: '#3d75cb' }">Shipper Details</h3>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Manufacture Date</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.manufactureDate">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="manufactureDate" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-      </nz-tab>
-      <!-- END Tab 2 -->
-      <!-- Tab 3 -->
-      <nz-tab nzTitle="Shipper Details">
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Shipper Name</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.shipperName">
+          <nz-form-label nzSm="24" nzMd="10">Shipper Name</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.shipperName">
             <nz-input-group>
               <input type="text" nz-input formControlName="shipperName" />
             </nz-input-group>
@@ -90,8 +132,8 @@
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Plate Number</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.plateNumber">
+          <nz-form-label nzSm="24" nzMd="10">Plate Number</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.plateNumber">
             <nz-input-group>
               <input type="text" nz-input formControlName="plateNumber" />
             </nz-input-group>
@@ -99,146 +141,289 @@
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Notes</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.notes">
+          <nz-form-label nzSm="24" nzMd="10">Notes</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.notes">
             <nz-input-group>
               <input type="text" nz-input formControlName="notes" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
-      </nz-tab>
-      <!-- END Tab 3 -->
-      <!-- Tab 3 -->
-      <nz-tab nzTitle="Container Condition and Status">
+        <!-- END Tab 3 -->
+
+        <!-- Tab 4 -->
+        <h3 [ngStyle]="{ color: '#3d75cb' }">Container Condition and Status</h3>
+
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Box Condition</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.boxCondition">
+          <nz-form-label nzSm="24" nzMd="10">Box Condition<span [ngStyle]="{ color: 'red' }"> *</span></nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.boxCondition">
             <nz-input-group>
-              <input type="text" nz-input formControlName="boxCondition" />
+              <nz-select
+                nzShowSearch
+                nzAllowClear
+                nzPlaceHolder="Select a box condition"
+                [ngStyle]="{ width: '100%' }"
+                formControlName="boxCondition"
+              >
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupBoxCondition"></nz-option>
+              </nz-select>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Empty Loaded</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.emptyLoaded">
+          <nz-form-label nzSm="24" nzMd="10">Empty/Loaded</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.emptyLoaded">
             <nz-input-group>
-              <input type="text" nz-input formControlName="emptyLoaded" />
+              <nz-select
+                nzShowSearch
+                nzAllowClear
+                nzPlaceHolder="Select empty loaded"
+                [ngStyle]="{ width: '100%' }"
+                formControlName="emptyLoaded"
+              >
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupEmptyLoaded"></nz-option>
+              </nz-select>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Yard Location</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.yardLocation">
+          <nz-form-label nzSm="24" nzMd="10">Yard Location</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.yardLocation">
             <nz-input-group>
-              <input type="text" nz-input formControlName="yardLocation" />
+              <nz-select
+                nzShowSearch
+                nzAllowClear
+                nzPlaceHolder="Select a yard location"
+                [ngStyle]="{ width: '100%' }"
+                formControlName="yardLocation"
+              >
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupYardLocation"></nz-option>
+              </nz-select>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Cleanliness</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.cleanliness">
+          <nz-form-label nzSm="24" nzMd="10">Cleanliness</nz-form-label>
+          <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.cleanliness">
             <nz-input-group>
-              <input type="text" nz-input formControlName="cleanliness" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-      </nz-tab>
-      <!-- END Tab 4 -->
-      <!-- Tab 4 -->
-      <nz-tab nzTitle="Damage Details of Container">
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Component</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.component">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="component" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Damage</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.damage">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="damage" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Repair</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.repair">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="repair" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Location</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.location">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="location" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Length</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.length">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="length" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Width</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.width">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="width" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Quantity</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.quantity">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="quantity" />
-            </nz-input-group>
-          </nz-form-control>
-        </nz-form-item>
-
-        <nz-form-item>
-          <nz-form-label [nzSpan]="4" nzFor="note">Description</nz-form-label>
-          <nz-form-control [nzSpan]="6" [nzErrorTip]="displayMessage.description">
-            <nz-input-group>
-              <input type="text" nz-input formControlName="description" />
+              <nz-select
+                nzShowSearch
+                nzAllowClear
+                nzPlaceHolder="Select cleanliness"
+                [ngStyle]="{ width: '100%' }"
+                formControlName="cleanliness"
+              >
+                <nz-option [nzLabel]="item.description" [nzValue]="item.id" *ngFor="let item of lookupCleanliness"></nz-option>
+              </nz-select>
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
         <!-- END Tab 4 -->
-      </nz-tab>
-    </form>
-  </nz-tabset>
-</div>
+      </nz-card>
+    </div>
 
-<div class="upload-container">
-  <nz-upload
-    nzType="drag"
-    [nzMultiple]="true"
-    nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-    (nzChange)="handleChange($event)"
-  >
-    <p class="ant-upload-drag-icon">
-      <i nz-icon nzType="inbox"></i>
-    </p>
-    <p class="ant-upload-text">Click or drag file to this area to upload</p>
-    <p class="ant-upload-hint">Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files</p>
-  </nz-upload>
-</div>
+    <div nz-col nzXs="24" nzMd="12" [ngStyle]="{ padding: '20px' }">
+      <nz-card>
+        <div nz-row>
+          <div nz-col nzSpan="24" [ngStyle]="{ display: 'flex' }">
+            <h3 [ngStyle]="{ color: '#3d75cb' }">Damage Details of Container</h3>
+            <button nz-button nzType="primary" (click)="open($event)" nzShape="circle" [ngStyle]="{ position: 'absolute', right: '0' }">
+              <i nz-icon nzType="plus"></i>
+            </button>
+          </div>
+        </div>
 
-<div class="bottom-container"></div>
+        <div nz-row [ngStyle]="{ padding: '8px 0px 8px 0px' }">
+          <div nz-col nzSpan="24">
+            <nz-table #damageTable [nzData]="listOfDamage" [nzScroll]="{ x: '1100px' }">
+              <thead>
+                <tr>
+                  <th>Action</th>
+                  <th>Component</th>
+                  <th>Damage</th>
+                  <th>Repair</th>
+                  <th>Location</th>
+                  <th>Length</th>
+                  <th>Width</th>
+                  <th>Quantity</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of damageTable.data">
+                  <td>
+                    <a>Delete</a>
+                  </td>
+                  <td>{{ data.component }}</td>
+                  <td>{{ data.damage }}</td>
+                  <td>{{ data.repair }}</td>
+                  <td>{{ data.location }}</td>
+                  <td>{{ data.length }}</td>
+                  <td>{{ data.width }}</td>
+                  <td>{{ data.quantity }}</td>
+                  <td>{{ data.description }}</td>
+                </tr>
+              </tbody>
+            </nz-table>
+          </div>
+        </div>
+
+        <div nz-row>
+          <div nz-col nzSpan="24" [ngStyle]="{ display: 'flex' }">
+            <h3 [ngStyle]="{ color: '#3d75cb' }">Captured Photos</h3>
+          </div>
+        </div>
+
+        <div nz-row>
+          <div nz-col nzSpan="24">
+            <div class="clearfix">
+              <nz-upload
+                nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                nzListType="picture-card"
+                [(nzFileList)]="fileList"
+                [nzShowButton]="fileList.length < 8"
+                [nzPreview]="handlePreview"
+              >
+                <div>
+                  <i nz-icon nzType="plus"></i>
+                  <div style="margin-top: 8px">Upload</div>
+                </div>
+              </nz-upload>
+              <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible = false">
+                <ng-template #modalContent>
+                  <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
+                </ng-template>
+              </nz-modal>
+            </div>
+          </div>
+        </div>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24">Remarks</nz-form-label>
+          <nz-form-control [nzSpan]="24" [nzErrorTip]="displayMessage.remarks">
+            <nz-input-group>
+              <textarea rows="4" nz-input formControlName="remarks"></textarea>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+      </nz-card>
+
+      <div class="bottom-container">
+        <div nz-row>
+          <div nz-col [nzSpan]="24">
+            <div class="signatureContaier">
+              <label>Signature</label>
+              <div class="wrapper">
+                <canvas id="signature-pad" class="signature-pad"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div nz-col [nzSpan]="24">
+            <kudos-button
+              [text]="'Clear Signature'"
+              [styles]="{ marginTop: '8px' }"
+              [buttonType]="'default'"
+              (onButtonClick)="clearSignature($event)"
+            ></kudos-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<nz-drawer
+  [nzBodyStyle]="{ overflow: 'auto' }"
+  [nzMaskClosable]="false"
+  [nzWidth]="400"
+  [nzVisible]="visible"
+  nzTitle="Damage Details of Container"
+  [nzFooter]="footerTpl"
+  (nzOnClose)="close()"
+>
+  <form nz-form [formGroup]="damageForm" *nzDrawerContent>
+    <!-- Tab 5 -->
+    <nz-form-item>
+      <nz-form-label nzSm="24" nzMd="10">Component</nz-form-label>
+      <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.component">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="component" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label nzSm="24" nzMd="10">Damage</nz-form-label>
+      <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.damage">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="damage" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label nzSm="24" nzMd="10">Repair</nz-form-label>
+      <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.repair">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="repair" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label nzSm="24" nzMd="10">Location</nz-form-label>
+      <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.location">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="location" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label nzSm="24" nzMd="10">Length</nz-form-label>
+      <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.length">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="length" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label nzSm="24" nzMd="10">Width</nz-form-label>
+      <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.width">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="width" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label nzSm="24" nzMd="10">Quantity</nz-form-label>
+      <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.quantity">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="quantity" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label nzSm="24" nzMd="10">Description</nz-form-label>
+      <nz-form-control nzSm="24" nzMd="14" [nzErrorTip]="displayMessage.description">
+        <nz-input-group>
+          <input type="text" nz-input formControlName="description" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <!-- END Tab 5 -->
+  </form>
+
+  <ng-template #footerTpl>
+    <div style="float: right">
+      <button nz-button style="margin-right: 8px" (click)="addDamage()" nzType="primary">Add</button>
+      <button nz-button (click)="close()">Cancel</button>
+    </div>
+  </ng-template>
+</nz-drawer>

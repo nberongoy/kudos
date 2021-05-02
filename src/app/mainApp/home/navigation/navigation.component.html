@@ -1,7 +1,12 @@
 <ul nz-menu nzMode="horizontal" class="navigationContainer">
   <img src="https://i.pinimg.com/originals/8a/b3/6c/8ab36c4bafe5b7983b13512c0d7c059d.jpg" class="navigationLogo" />
   <div class="navigationBody" nzMatchRouter>
-    <li nz-menu-item nzMatchRouter><a [routerLink]="['/', 'home', 'menu']">Container Management</a></li>
+    <li nz-menu-item nzMatchRouter>
+      <a [routerLink]="['/', 'home', 'inquiry']">Container Inquiry</a>
+    </li>
+    <li nz-menu-item nzMatchRouter>
+      <a [routerLink]="['/', 'home', 'menu']">Container Management</a>
+    </li>
     <li nz-menu-item nzMatchRouter><a [routerLink]="['/', 'login']">Logout</a></li>
   </div>
 </ul>
