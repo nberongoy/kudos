@@ -9164,8 +9164,8 @@
         type: CheckerOutComponent,
         selectors: [["chekerOut"]],
         decls: 141,
-        vars: 77,
-        consts: [["nz-row", ""], ["nz-col", "", "nzXs", "24", "nzSm", "24", "nzMd", "12"], [3, "ngStyle"], [3, "text", "styles", "buttonType", "onButtonClick"], [3, "text", "styles", "buttonType"], ["nz-form", "", "autocomplete", "off", 3, "formGroup"], ["nz-col", "", "nzXs", "24", "nzSm", "24", "nzMd", "12", 3, "ngStyle"], ["nzSm", "24", "nzMd", "10"], ["nzSm", "24", "nzMd", "14", 3, "nzErrorTip"], ["formControlName", "inspectedDate", 3, "ngStyle"], ["formControlName", "inspectedTime", "nzFormat", "h:mm a", 3, "ngStyle", "nzUse12Hours"], ["type", "text", "nz-input", "", "formControlName", "inspector"], ["type", "text", "nz-input", "", "formControlName", "containerNo", 3, "ngModelChange"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select shipping lines", "formControlName", "shippingLines", 3, "ngStyle"], [3, "nzLabel", "nzValue", 4, "ngFor", "ngForOf"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a size type", "formControlName", "sizeType", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a class", "formControlName", "class", 3, "ngStyle"], ["type", "text", "nz-input", "", "formControlName", "manufactureDate"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select empty loaded", "formControlName", "emptyLoaded", 3, "ngStyle"], ["type", "text", "nz-input", "", "formControlName", "booking"], ["type", "text", "nz-input", "", "formControlName", "shipperName"], ["type", "text", "nz-input", "", "formControlName", "plateNumber"], ["type", "text", "nz-input", "", "formControlName", "notes"], ["type", "text", "nz-input", "", "formControlName", "sealNumber"], ["nz-col", "", "nzXs", "24", "nzMd", "12", 3, "ngStyle"], ["nz-col", "", "nzSpan", "24", 3, "ngStyle"], ["nz-col", "", "nzSpan", "24"], [1, "clearfix"], ["nzAction", "https://www.mocky.io/v2/5cc8019d300000980a055e76", "nzListType", "picture-card", 3, "nzFileList", "nzShowButton", "nzPreview", "nzFileListChange"], ["nz-icon", "", "nzType", "plus"], [2, "margin-top", "8px"], [3, "nzVisible", "nzContent", "nzFooter", "nzOnCancel"], ["modalContent", ""], [3, "nzSpan"], [3, "nzSpan", "nzErrorTip"], ["rows", "4", "nz-input", "", "formControlName", "remarks"], [1, "bottom-container"], ["nz-col", "", 3, "nzSpan"], [1, "signatureContaier"], [1, "wrapper"], ["id", "signature-pad", 1, "signature-pad"], [3, "nzLabel", "nzValue"], [3, "src", "ngStyle"]],
+        vars: 78,
+        consts: [["nz-row", ""], ["nz-col", "", "nzXs", "24", "nzSm", "24", "nzMd", "12"], [3, "ngStyle"], [3, "text", "styles", "buttonType", "onButtonClick"], [3, "text", "styles", "buttonType"], ["nz-form", "", "autocomplete", "off", 3, "formGroup"], ["nz-col", "", "nzXs", "24", "nzSm", "24", "nzMd", "12", 3, "ngStyle"], ["nzSm", "24", "nzMd", "10"], ["nzSm", "24", "nzMd", "14", 3, "nzErrorTip"], ["formControlName", "inspectedDate", 3, "ngStyle"], ["formControlName", "inspectedTime", "nzFormat", "h:mm a", 3, "ngStyle", "nzUse12Hours"], ["type", "text", "nz-input", "", "formControlName", "inspector"], ["type", "text", "nz-input", "", "formControlName", "containerNo", 3, "ngModelChange"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select shipping lines", "formControlName", "shippingLines", 3, "ngStyle"], [3, "nzLabel", "nzValue", 4, "ngFor", "ngForOf"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a size type", "formControlName", "sizeType", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a class", "formControlName", "class", 3, "ngStyle"], ["type", "text", "nz-input", "", "formControlName", "manufactureDate"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select empty loaded", "formControlName", "emptyLoaded", 3, "ngStyle"], ["type", "text", "nz-input", "", "formControlName", "booking"], ["type", "text", "nz-input", "", "formControlName", "shipperName"], ["type", "text", "nz-input", "", "formControlName", "plateNumber"], ["type", "text", "nz-input", "", "formControlName", "notes"], ["type", "text", "nz-input", "", "formControlName", "sealNumber"], ["nz-col", "", "nzXs", "24", "nzMd", "12", 3, "ngStyle"], ["nz-col", "", "nzSpan", "24", 3, "ngStyle"], ["nz-col", "", "nzSpan", "24"], [1, "clearfix"], ["nzAction", "https://www.mocky.io/v2/5cc8019d300000980a055e76", "nzListType", "picture-card", 3, "nzFileList", "nzShowButton", "nzPreview", "nzMultiple", "nzFileListChange"], ["nz-icon", "", "nzType", "plus"], [2, "margin-top", "8px"], [3, "nzVisible", "nzContent", "nzFooter", "nzOnCancel"], ["modalContent", ""], [3, "nzSpan"], [3, "nzSpan", "nzErrorTip"], ["rows", "4", "nz-input", "", "formControlName", "remarks"], [1, "bottom-container"], ["nz-col", "", 3, "nzSpan"], [1, "signatureContaier"], [1, "wrapper"], ["id", "signature-pad", 1, "signature-pad"], [3, "nzLabel", "nzValue"], [3, "src", "ngStyle"]],
         template: function CheckerOutComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵelementStart"](0, "div", 0);
@@ -9670,19 +9670,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](57, _c1));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](58, _c1));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](58, _c2));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](59, _c2));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("text", "Save")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](59, _c3))("buttonType", "primary");
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("text", "Save")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](60, _c3))("buttonType", "primary");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("text", "Cancel")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](60, _c4))("buttonType", "default");
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("text", "Cancel")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](61, _c4))("buttonType", "default");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
@@ -9690,11 +9690,11 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](61, _c5));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](62, _c5));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](62, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](63, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](5);
 
@@ -9702,7 +9702,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](63, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](64, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](4);
 
@@ -9710,7 +9710,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](64, _c0))("nzUse12Hours", true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](65, _c0))("nzUse12Hours", true);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](4);
 
@@ -9718,11 +9718,11 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](65, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](66, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](66, _c7));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](67, _c7));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
@@ -9730,7 +9730,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](67, _c7));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](68, _c7));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
@@ -9738,7 +9738,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](68, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](69, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
@@ -9750,7 +9750,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](69, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](70, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
@@ -9762,7 +9762,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](70, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](71, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
@@ -9778,7 +9778,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](71, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](72, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
@@ -9786,7 +9786,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](72, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](73, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](5);
 
@@ -9810,19 +9810,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](73, _c5));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](74, _c5));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](74, _c8));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](75, _c8));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](75, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](76, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("nzFileList", ctx.fileList)("nzShowButton", ctx.fileList.length < 8)("nzPreview", ctx.handlePreview);
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("nzFileList", ctx.fileList)("nzShowButton", ctx.fileList.length < 8)("nzPreview", ctx.handlePreview)("nzMultiple", true);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](5);
 
@@ -9846,7 +9846,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("text", "Clear Signature")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](76, _c9))("buttonType", "default");
+            _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵproperty"]("text", "Clear Signature")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵpureFunction0"](77, _c9))("buttonType", "default");
           }
         },
         directives: [ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_12__["NzRowDirective"], ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_12__["NzColDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgStyle"], _common_components_button_button_component__WEBPACK_IMPORTED_MODULE_14__["KudosButtonComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_forms_forms_ba"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatusGroup"], ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_15__["NzFormDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroupDirective"], ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_16__["NzCardComponent"], ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_15__["NzFormItemComponent"], ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_15__["NzFormLabelComponent"], ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_15__["NzFormControlComponent"], ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_17__["NzDatePickerComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControlName"], ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_18__["NzInputGroupComponent"], ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_19__["ɵNzTransitionPatchDirective"], ng_zorro_antd_time_picker__WEBPACK_IMPORTED_MODULE_20__["NzTimePickerComponent"], ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_18__["NzInputDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_21__["NzSelectComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgForOf"], ng_zorro_antd_upload__WEBPACK_IMPORTED_MODULE_22__["NzUploadComponent"], ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_23__["NzIconDirective"], ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_24__["NzModalComponent"], ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_21__["NzOptionComponent"]],
@@ -15523,8 +15523,8 @@
         type: CheckerInComponent,
         selectors: [["checkerIn"]],
         decls: 190,
-        vars: 111,
-        consts: [["nz-row", ""], ["nz-col", "", "nzXs", "24", "nzSm", "24", "nzMd", "12"], [3, "ngStyle"], [3, "text", "styles", "buttonType", "onButtonClick"], [3, "text", "styles", "buttonType"], ["nz-form", "", "autocomplete", "off", 3, "formGroup"], ["nz-col", "", "nzXs", "24", "nzSm", "24", "nzMd", "12", 3, "ngStyle"], ["nzSm", "24", "nzMd", "10"], ["nzSm", "24", "nzMd", "14", 3, "nzErrorTip"], ["formControlName", "inspectedDate", 3, "ngStyle"], ["formControlName", "inspectedTime", "nzFormat", "h:mm a", 3, "ngStyle", "nzUse12Hours"], ["type", "text", "nz-input", "", "formControlName", "inspector"], ["type", "text", "nz-input", "", "formControlName", "containerNo"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select shipping lines", "formControlName", "shippingLines", 3, "ngStyle"], [3, "nzLabel", "nzValue", 4, "ngFor", "ngForOf"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a size type", "formControlName", "sizeType", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a class", "formControlName", "class", 3, "ngStyle"], ["formControlName", "manufactureDate", 3, "ngStyle"], ["type", "text", "nz-input", "", "formControlName", "shipperName"], ["type", "text", "nz-input", "", "formControlName", "plateNumber"], ["type", "text", "nz-input", "", "formControlName", "notes"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a box condition", "formControlName", "boxCondition", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select empty loaded", "formControlName", "emptyLoaded", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a yard location", "formControlName", "yardLocation", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select cleanliness", "formControlName", "cleanliness", 3, "ngStyle"], ["nz-col", "", "nzXs", "24", "nzMd", "12", 3, "ngStyle"], ["nz-col", "", "nzSpan", "24", 3, "ngStyle"], ["nz-button", "", "nzType", "primary", "nzShape", "circle", 3, "ngStyle", "click"], ["nz-icon", "", "nzType", "plus"], ["nz-row", "", 3, "ngStyle"], ["nz-col", "", "nzSpan", "24"], [3, "nzData", "nzScroll"], ["damageTable", ""], [4, "ngFor", "ngForOf"], [1, "clearfix"], ["nzAction", "https://www.mocky.io/v2/5cc8019d300000980a055e76", "nzListType", "picture-card", 3, "nzFileList", "nzShowButton", "nzPreview", "nzFileListChange"], [2, "margin-top", "8px"], [3, "nzVisible", "nzContent", "nzFooter", "nzOnCancel"], ["modalContent", ""], [3, "nzSpan"], [3, "nzSpan", "nzErrorTip"], ["rows", "4", "nz-input", "", "formControlName", "remarks"], [1, "bottom-container"], ["nz-col", "", 3, "nzSpan"], [1, "signatureContaier"], [1, "wrapper"], ["id", "signature-pad", 1, "signature-pad"], ["nzTitle", "Damage Details of Container", 3, "nzBodyStyle", "nzMaskClosable", "nzWidth", "nzVisible", "nzFooter", "nzOnClose"], ["nz-form", "", 3, "formGroup", 4, "nzDrawerContent"], ["footerTpl", ""], [3, "nzLabel", "nzValue"], [3, "src", "ngStyle"], ["nz-form", "", 3, "formGroup"], ["type", "text", "nz-input", "", "formControlName", "component"], ["type", "text", "nz-input", "", "formControlName", "damage"], ["type", "text", "nz-input", "", "formControlName", "repair"], ["type", "text", "nz-input", "", "formControlName", "location"], ["type", "text", "nz-input", "", "formControlName", "length"], ["type", "text", "nz-input", "", "formControlName", "width"], ["type", "text", "nz-input", "", "formControlName", "quantity"], ["type", "text", "nz-input", "", "formControlName", "description"], [2, "float", "right"], ["nz-button", "", "nzType", "primary", 2, "margin-right", "8px", 3, "click"], ["nz-button", "", 3, "click"]],
+        vars: 112,
+        consts: [["nz-row", ""], ["nz-col", "", "nzXs", "24", "nzSm", "24", "nzMd", "12"], [3, "ngStyle"], [3, "text", "styles", "buttonType", "onButtonClick"], [3, "text", "styles", "buttonType"], ["nz-form", "", "autocomplete", "off", 3, "formGroup"], ["nz-col", "", "nzXs", "24", "nzSm", "24", "nzMd", "12", 3, "ngStyle"], ["nzSm", "24", "nzMd", "10"], ["nzSm", "24", "nzMd", "14", 3, "nzErrorTip"], ["formControlName", "inspectedDate", 3, "ngStyle"], ["formControlName", "inspectedTime", "nzFormat", "h:mm a", 3, "ngStyle", "nzUse12Hours"], ["type", "text", "nz-input", "", "formControlName", "inspector"], ["type", "text", "nz-input", "", "formControlName", "containerNo"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select shipping lines", "formControlName", "shippingLines", 3, "ngStyle"], [3, "nzLabel", "nzValue", 4, "ngFor", "ngForOf"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a size type", "formControlName", "sizeType", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a class", "formControlName", "class", 3, "ngStyle"], ["formControlName", "manufactureDate", 3, "ngStyle"], ["type", "text", "nz-input", "", "formControlName", "shipperName"], ["type", "text", "nz-input", "", "formControlName", "plateNumber"], ["type", "text", "nz-input", "", "formControlName", "notes"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a box condition", "formControlName", "boxCondition", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select empty loaded", "formControlName", "emptyLoaded", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select a yard location", "formControlName", "yardLocation", 3, "ngStyle"], ["nzShowSearch", "", "nzAllowClear", "", "nzPlaceHolder", "Select cleanliness", "formControlName", "cleanliness", 3, "ngStyle"], ["nz-col", "", "nzXs", "24", "nzMd", "12", 3, "ngStyle"], ["nz-col", "", "nzSpan", "24", 3, "ngStyle"], ["nz-button", "", "nzType", "primary", "nzShape", "circle", 3, "ngStyle", "click"], ["nz-icon", "", "nzType", "plus"], ["nz-row", "", 3, "ngStyle"], ["nz-col", "", "nzSpan", "24"], [3, "nzData", "nzScroll"], ["damageTable", ""], [4, "ngFor", "ngForOf"], [1, "clearfix"], ["nzAction", "https://www.mocky.io/v2/5cc8019d300000980a055e76", "nzListType", "picture-card", 3, "nzFileList", "nzShowButton", "nzPreview", "nzMultiple", "nzFileListChange"], [2, "margin-top", "8px"], [3, "nzVisible", "nzContent", "nzFooter", "nzOnCancel"], ["modalContent", ""], [3, "nzSpan"], [3, "nzSpan", "nzErrorTip"], ["rows", "4", "nz-input", "", "formControlName", "remarks"], [1, "bottom-container"], ["nz-col", "", 3, "nzSpan"], [1, "signatureContaier"], [1, "wrapper"], ["id", "signature-pad", 1, "signature-pad"], ["nzTitle", "Damage Details of Container", 3, "nzBodyStyle", "nzMaskClosable", "nzWidth", "nzVisible", "nzFooter", "nzOnClose"], ["nz-form", "", 3, "formGroup", 4, "nzDrawerContent"], ["footerTpl", ""], [3, "nzLabel", "nzValue"], [3, "src", "ngStyle"], ["nz-form", "", 3, "formGroup"], ["type", "text", "nz-input", "", "formControlName", "component"], ["type", "text", "nz-input", "", "formControlName", "damage"], ["type", "text", "nz-input", "", "formControlName", "repair"], ["type", "text", "nz-input", "", "formControlName", "location"], ["type", "text", "nz-input", "", "formControlName", "length"], ["type", "text", "nz-input", "", "formControlName", "width"], ["type", "text", "nz-input", "", "formControlName", "quantity"], ["type", "text", "nz-input", "", "formControlName", "description"], [2, "float", "right"], ["nz-button", "", "nzType", "primary", 2, "margin-right", "8px", 3, "click"], ["nz-button", "", 3, "click"]],
         template: function CheckerInComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelementStart"](0, "div", 0);
@@ -16187,19 +16187,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](79, _c1));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](80, _c1));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](80, _c2));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](81, _c2));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("text", "Save")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](81, _c3))("buttonType", "primary");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("text", "Save")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](82, _c3))("buttonType", "primary");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("text", "Cancel")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](82, _c4))("buttonType", "default");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("text", "Cancel")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](83, _c4))("buttonType", "default");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
@@ -16207,11 +16207,11 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](83, _c5));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](84, _c5));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](84, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](85, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
 
@@ -16219,7 +16219,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](85, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](86, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](4);
 
@@ -16227,7 +16227,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](86, _c0))("nzUse12Hours", true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](87, _c0))("nzUse12Hours", true);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](4);
 
@@ -16235,11 +16235,11 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](87, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](88, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](88, _c7));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](89, _c7));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
@@ -16247,7 +16247,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](89, _c7));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](90, _c7));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
@@ -16255,7 +16255,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](90, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](91, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
@@ -16267,7 +16267,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](91, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](92, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
@@ -16279,7 +16279,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](92, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](93, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
@@ -16291,11 +16291,11 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](93, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](94, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](94, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](95, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
 
@@ -16311,11 +16311,11 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](95, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](96, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](96, _c7));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](97, _c7));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
@@ -16323,7 +16323,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](97, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](98, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
@@ -16335,7 +16335,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](98, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](99, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
@@ -16347,7 +16347,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](99, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](100, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
@@ -16359,7 +16359,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](100, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](101, _c0));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
@@ -16367,27 +16367,27 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](101, _c5));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](102, _c5));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](102, _c8));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](103, _c8));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](103, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](104, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](104, _c9));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](105, _c9));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](105, _c10));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](106, _c10));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("nzData", ctx.listOfDamage)("nzScroll", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](106, _c11));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("nzData", ctx.listOfDamage)("nzScroll", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](107, _c11));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](23);
 
@@ -16395,15 +16395,15 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](107, _c8));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](108, _c8));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](108, _c6));
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](109, _c6));
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("nzFileList", ctx.fileList)("nzShowButton", ctx.fileList.length < 8)("nzPreview", ctx.handlePreview);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("nzFileList", ctx.fileList)("nzShowButton", ctx.fileList.length < 8)("nzPreview", ctx.handlePreview)("nzMultiple", true);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](5);
 
@@ -16427,11 +16427,11 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("text", "Clear Signature")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](109, _c12))("buttonType", "default");
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("text", "Clear Signature")("styles", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](110, _c12))("buttonType", "default");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("nzBodyStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](110, _c13))("nzMaskClosable", false)("nzWidth", 400)("nzVisible", ctx.visible)("nzFooter", _r12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵproperty"]("nzBodyStyle", _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵpureFunction0"](111, _c13))("nzMaskClosable", false)("nzWidth", 400)("nzVisible", ctx.visible)("nzFooter", _r12);
           }
         },
         directives: [ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_13__["NzRowDirective"], ng_zorro_antd_grid__WEBPACK_IMPORTED_MODULE_13__["NzColDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_14__["NgStyle"], _common_components_button_button_component__WEBPACK_IMPORTED_MODULE_15__["KudosButtonComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_forms_forms_ba"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatusGroup"], ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_16__["NzFormDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroupDirective"], ng_zorro_antd_card__WEBPACK_IMPORTED_MODULE_17__["NzCardComponent"], ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_16__["NzFormItemComponent"], ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_16__["NzFormLabelComponent"], ng_zorro_antd_form__WEBPACK_IMPORTED_MODULE_16__["NzFormControlComponent"], ng_zorro_antd_date_picker__WEBPACK_IMPORTED_MODULE_18__["NzDatePickerComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControlName"], ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_19__["NzInputGroupComponent"], ng_zorro_antd_core_transition_patch__WEBPACK_IMPORTED_MODULE_20__["ɵNzTransitionPatchDirective"], ng_zorro_antd_time_picker__WEBPACK_IMPORTED_MODULE_21__["NzTimePickerComponent"], ng_zorro_antd_input__WEBPACK_IMPORTED_MODULE_19__["NzInputDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_22__["NzSelectComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_14__["NgForOf"], ng_zorro_antd_button__WEBPACK_IMPORTED_MODULE_23__["NzButtonComponent"], ng_zorro_antd_core_wave__WEBPACK_IMPORTED_MODULE_24__["NzWaveDirective"], ng_zorro_antd_icon__WEBPACK_IMPORTED_MODULE_25__["NzIconDirective"], ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_26__["NzTableComponent"], ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_26__["NzTheadComponent"], ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_26__["NzTrDirective"], ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_26__["NzTableCellDirective"], ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_26__["NzThMeasureDirective"], ng_zorro_antd_table__WEBPACK_IMPORTED_MODULE_26__["NzTbodyComponent"], ng_zorro_antd_upload__WEBPACK_IMPORTED_MODULE_27__["NzUploadComponent"], ng_zorro_antd_modal__WEBPACK_IMPORTED_MODULE_28__["NzModalComponent"], ng_zorro_antd_drawer__WEBPACK_IMPORTED_MODULE_29__["NzDrawerComponent"], ng_zorro_antd_drawer__WEBPACK_IMPORTED_MODULE_29__["NzDrawerContentDirective"], ng_zorro_antd_select__WEBPACK_IMPORTED_MODULE_22__["NzOptionComponent"]],
